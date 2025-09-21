@@ -1,0 +1,1 @@
+Spring Boot application integrated with Google’s Gemini AI model using the Google AI SDK. It demonstrates how to build intelligent applications by connecting Spring Boot with Gemini for tasks like question answering, text generation, and conversational AI.
