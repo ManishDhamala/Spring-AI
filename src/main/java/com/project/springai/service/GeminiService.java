@@ -1,4 +1,4 @@
-package com.project.springai;
+package com.project.springai.service;
 
 import com.google.genai.Client;
 import com.google.genai.types.GenerateContentResponse;
@@ -14,7 +14,8 @@ public class GeminiService {
     @Value("${genai.model}")
     private String model;
 
-    public String askQuestion(String prompt) {
+    public String askQuestionGetAnswer(String prompt) {
+
         // Construct client with API key
         Client client = Client.builder()
                 .apiKey(apiKey)
@@ -23,7 +24,7 @@ public class GeminiService {
         // Send request
         GenerateContentResponse response = client.models.generateContent(model, prompt, null);
 
-        // Extract text
+        // Extract response text
         return response.text();
     }
 }
